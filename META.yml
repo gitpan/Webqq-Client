@@ -1,0 +1,28 @@
+---
+abstract: 'A webqq robot in Perl Language'
+author:
+  - 'Perfi <sjdy521@163.com>'
+build_requires:
+  ExtUtils::MakeMaker: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 7, CPAN::Meta::Converter version 2.142690'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Webqq-Client
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  AnyEvent::UserAgent: '0'
+  DateTime: '0'
+  Digest::MD5: '0'
+  JSON: '0'
+  LWP::Protocol::https: '0'
+  LWP::UserAgent: '0'
+resources: {}
+version: '4.6'
