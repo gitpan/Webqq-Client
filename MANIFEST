@@ -1,12 +1,14 @@
 Changes
 demo/console_message.pl
 demo/echo.pl
+demo/msgstat.t
 demo/perldoc.pl
 doc/Client.pod
 lib/Webqq/Client.pm
 lib/Webqq/Client.pod
 lib/Webqq/Client/App/About.pm
 lib/Webqq/Client/App/ClientStore.pm
+lib/Webqq/Client/App/HelloGirl.pm
 lib/Webqq/Client/App/Msgstat.pm
 lib/Webqq/Client/App/Perlcode.pm
 lib/Webqq/Client/App/Perldoc.pm
