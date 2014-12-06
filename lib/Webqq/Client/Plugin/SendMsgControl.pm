@@ -1,9 +1,7 @@
-package Webqq::Client::App::SendMsgControl;
-use Exporter 'import';
+package Webqq::Client::Plugin::SendMsgControl;
 use Webqq::Client::Util qw(console);
-@EXPORT=qw(SendMsgControl);
-sub SendMsgControl{
-    my($msg,$client) = @_;
+sub call{
+    my($client,$msg) = @_;
     if($msg->{content}=~/^-shutdown$/){
         my $from_qq = $msg->from_qq;
         return unless $from_qq == 308165330;
@@ -19,5 +17,6 @@ sub SendMsgControl{
             console("系统已重新开启消息发送功能\n") if $client->{debug};
             $client->reply_message($msg,"系统已重新开启消息发送功能");
     }
+    return 1;
 }
 1;

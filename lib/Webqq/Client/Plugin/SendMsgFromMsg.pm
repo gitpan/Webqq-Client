@@ -1,7 +1,5 @@
-package Webqq::Client::App::SendMsgFromMsg;
+package Webqq::Client::Plugin::SendMsgFromMsg;
 use Webqq::Client::Util qw(console);
-use Exporter 'import';
-@EXPORT = qw(SendMsgFromMsg);
 my %GROUP_MARKNAME = qw(
     test    IT狂人  
     a       PERL学习交流
@@ -9,9 +7,9 @@ my %GROUP_MARKNAME = qw(
     c       PERL
 );
 
-sub SendMsgFromMsg{
-    my $msg = shift;
+sub call{
     my $client = shift; 
+    my $msg = shift;
     if($msg->{content} =~/^(?::m)(?:\n|[\t ]+)(.*?)(?:\n^|[\t ]+)(?::e)$/ms){
         my $command = $1;
         open my $fh,"<",\$command or return;
@@ -37,6 +35,8 @@ sub SendMsgFromMsg{
         
         close $fh;
     }
+
+    return 1;
 }
 
 1;

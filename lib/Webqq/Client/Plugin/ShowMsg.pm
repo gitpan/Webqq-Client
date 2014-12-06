@@ -1,12 +1,12 @@
-package Webqq::Client::App::ShowMsg;
+package Webqq::Client::Plugin::ShowMsg;
 use Webqq::Client::Util qw(console);
 use POSIX qw(strftime);
-use Exporter 'import';
-our @EXPORT = qw(ShowMsg);
 use Encode;
 
-sub ShowMsg{
+sub call{
+    my $client = shift;
     my $msg = shift;
+    my $attach = shift; 
     if($msg->{type} eq 'group_message'){
         #$msg是一个群消息的hash引用，包含如下key
         
@@ -37,7 +37,7 @@ sub ShowMsg{
         format_msg(
                 strftime("[%y/%m/%d %H:%M:%S]",localtime($msg->{msg_time}))
             .   "\@$msg_sender(在群:$group_name) 说: ",
-                $msg->{content}
+                $msg->{content} . $alarm
         );         
     }
     #我们多了如下的get数据项
@@ -58,7 +58,7 @@ sub ShowMsg{
         format_msg(
                 strftime("[%y/%m/%d %H:%M:%S]",localtime($msg->{msg_time}))
             .   "\@$msg_sender(对好友:\@$msg_receiever) 说: ",
-            $msg->{content} 
+            $msg->{content}  . $alarm
         );
     }
 
@@ -73,9 +73,11 @@ sub ShowMsg{
         format_msg(
             strftime("[%y/%m/%d %H:%M:%S]",localtime($msg->{msg_time}))
             .   "\@$msg_sender_nick(对陌生人:\@$msg_receiever_nick) 说: ",
-            $msg->{content}
+            $msg->{content} . $alarm
         );
     }
+
+    return 1;
 }
 
 sub format_msg{
@@ -95,3 +97,5 @@ sub format_msg{
         console $lh, $lc,"\n";
     } 
 }
+
+1;

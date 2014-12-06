@@ -1,10 +1,8 @@
-package Webqq::Client::App::SmartReply2;
-use Exporter 'import';
-@EXPORT=qw(SmartReply2);
+package Webqq::Client::Plugin::SmartReply2;
 my $API = 'http://www.xiaodoubi.com/bot/api.php?chat=';
-sub SmartReply2{
-    my $msg = shift;
+sub call{
     my $client = shift;
+    my $msg = shift;
     my $res;
     eval{
         local $SIG{ALRM} = sub{die "timout\n"};
