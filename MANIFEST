@@ -35,6 +35,7 @@ lib/Webqq/Client/Plugin/HelloGirl.pm
 lib/Webqq/Client/Plugin/Msgstat.pm
 lib/Webqq/Client/Plugin/Perlcode.pm
 lib/Webqq/Client/Plugin/Perldoc.pm
+lib/Webqq/Client/Plugin/PicLimit.pm
 lib/Webqq/Client/Plugin/PostImgVerifycode.pm
 lib/Webqq/Client/Plugin/SendMsgControl.pm
 lib/Webqq/Client/Plugin/SendMsgFromMsg.pm
