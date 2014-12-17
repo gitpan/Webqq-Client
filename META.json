@@ -4,7 +4,7 @@
       "Perfi <sjdy521@163.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 7, CPAN::Meta::Converter version 2.142690",
+   "generated_by" : "ExtUtils::MakeMaker version 7.04, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
@@ -35,6 +35,7 @@
             "AnyEvent::UserAgent" : "0",
             "DateTime" : "0",
             "Digest::MD5" : "0",
+            "JE" : "0",
             "JSON" : "0",
             "LWP::Protocol::https" : "0",
             "LWP::UserAgent" : "0"
@@ -43,5 +44,5 @@
    },
    "release_status" : "stable",
    "resources" : {},
-   "version" : "5.5"
+   "version" : "5.6"
 }

@@ -22,6 +22,7 @@ lib/Webqq/Client/Method/_login1.pm
 lib/Webqq/Client/Method/_login2.pm
 lib/Webqq/Client/Method/_prepare_for_login.pm
 lib/Webqq/Client/Method/_recv_message.pm
+lib/Webqq/Client/Method/_report.pm
 lib/Webqq/Client/Method/_send_group_message.pm
 lib/Webqq/Client/Method/_send_message.pm
 lib/Webqq/Client/Method/_send_sess_message.pm
