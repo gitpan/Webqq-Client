@@ -19,11 +19,10 @@ no_index:
     - inc
 requires:
   AnyEvent::UserAgent: '0'
-  DateTime: '0'
   Digest::MD5: '0'
   JE: '0'
   JSON: '0'
   LWP::Protocol::https: '0'
   LWP::UserAgent: '0'
 resources: {}
-version: '6.0'
+version: '6.1'

@@ -33,7 +33,6 @@
       "runtime" : {
          "requires" : {
             "AnyEvent::UserAgent" : "0",
-            "DateTime" : "0",
             "Digest::MD5" : "0",
             "JE" : "0",
             "JSON" : "0",
@@ -44,5 +43,5 @@
    },
    "release_status" : "stable",
    "resources" : {},
-   "version" : "6.0"
+   "version" : "6.1"
 }
