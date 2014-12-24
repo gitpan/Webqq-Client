@@ -8,7 +8,7 @@ use Webqq::Client::Cache;
 use Webqq::Message::Queue;
 
 #定义模块的版本号
-our $VERSION = "5.9";
+our $VERSION = "6.0";
 
 use LWP::UserAgent;#同步HTTP请求客户端
 use AnyEvent::UserAgent;#异步HTTP请求客户端
@@ -219,7 +219,7 @@ sub login{
 
     #登录不成功，客户端退出运行
     if($self->{login_state} ne 'success'){
-        console "登录失败，客户端退出（可能验证码错误或者网络不稳定，请多尝试几次）\n";
+        console "登录失败，客户端退出（可能网络不稳定，请多尝试几次）\n";
         exit;
     }
     else{
