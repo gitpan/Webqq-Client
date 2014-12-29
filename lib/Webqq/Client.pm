@@ -9,7 +9,7 @@ use Webqq::Client::Cache;
 use Webqq::Message::Queue;
 
 #定义模块的版本号
-our $VERSION = "6.5";
+our $VERSION = "6.6";
 
 use LWP::UserAgent;#同步HTTP请求客户端
 use AnyEvent::UserAgent;#异步HTTP请求客户端
@@ -622,13 +622,15 @@ sub update_group_info{
                 console "更新[ $gl->{name} ]成功，但暂时没有获取到群成员信息...\n";
             }
             if( @{$self->{qq_database}{group}} > 0 ){
+                my $flag = 0;
                 for( @{$self->{qq_database}{group}} ){
                     if($_->{ginfo}{code} eq $group_info->{ginfo}{code} ){
                         $_ = $group_info;
+                        $flag = 1;
                         last;
                     }
                 }
-                push @{ $self->{qq_database}{group} }, $group_info;
+                push @{ $self->{qq_database}{group} }, $group_info if $flag == 0;
             }
             else{
                 push @{ $self->{qq_database}{group} }, $group_info;
