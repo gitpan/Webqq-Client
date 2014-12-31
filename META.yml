@@ -27,4 +27,4 @@ requires:
   Time::Piece: '0'
   Time::Seconds: '0'
 resources: {}
-version: '6.6'
+version: '6.8'
