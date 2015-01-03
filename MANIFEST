@@ -26,12 +26,14 @@ lib/Webqq/Client/Method/_report.pm
 lib/Webqq/Client/Method/_send_group_message.pm
 lib/Webqq/Client/Method/_send_message.pm
 lib/Webqq/Client/Method/_send_sess_message.pm
+lib/Webqq/Client/Method/get_dwz.pm
 lib/Webqq/Client/Method/get_qq_from_uin.pm
 lib/Webqq/Client/Method/get_single_long_nick.pm
 lib/Webqq/Client/Method/logout.pm
 lib/Webqq/Client/Plugin.pm
 lib/Webqq/Client/Plugin/About.pm
 lib/Webqq/Client/Plugin/ClientStore.pm
+lib/Webqq/Client/Plugin/CpanRecentModule.pm
 lib/Webqq/Client/Plugin/HelloGirl.pm
 lib/Webqq/Client/Plugin/LinkInfo.pm
 lib/Webqq/Client/Plugin/Msgstat.pm

@@ -528,6 +528,12 @@ webqq是腾讯的老版本，smartqq是最新版本
 
     $client->on_login() = sub{...;};
 
+=item on_run() :lvalue
+
+设置客户端执行run之前的回调
+    
+    $client->on_run() = sub{...;};
+
 =item on_input_img_verifycode() :lvalue
 
 正常情况下，如果你是直接在终端运行webqq，需要输入验证码时
@@ -941,6 +947,14 @@ $clent->search_group()/$clent->search_member_in_group()会自动调用update_gro
 通过gid查找gcode    
 
     my $gcode = $client->get_group_code_from_gid($gid);
+
+=item get_dwz($url)
+
+使用百度短地址api生成url对应的短地址，由于是在线生成，如果超时返回undef
+
+    my $url = "http://www.baidu.com";
+    my $dwz = $client->get_dwz($url);
+    $dwz = $url unless defined $dwz;
 
 =item get_single_long_nick($uin)
 
